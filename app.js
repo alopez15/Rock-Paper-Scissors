@@ -101,7 +101,6 @@ let game = () => {
 
     console.log(`Player Score: ${playerScore} \nComputer Score: ${computerScore}`)
     flag = 0;
-
     }
 
     console.log(`Game Over!`)
