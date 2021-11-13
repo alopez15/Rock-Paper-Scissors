@@ -71,11 +71,10 @@ let game = () => {
         while (flag == 0){
             playerSelection = prompt('Enter Rock, Paper, or Scissors');
 
-            newPlayerSelection = playerSelection.toLowerCase();         // convert string to lower case
-            firstLetter = newPlayerSelection.charAt(0);                 // take first letter
-            newFirstLetter = firstLetter.toUpperCase();                 // convert first letter to uppercase
-            slicedWord = newPlayerSelection.slice(1);                   // remove first letter and keep the rest of the
-            newPlayerSelection = newFirstLetter + slicedWord            // add uppercase first letter + the remaining letters from the sliced word
+            //Takes first letter and convert it to uppercase, then 
+            //Then concatenate with the rest of the word after slicing
+            //The first letter and converting it ti lowecase
+            newPlayerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();  
 
         if(newPlayerSelection != 'Rock' && newPlayerSelection != 'Scissors' && newPlayerSelection != 'Paper'){
             alert('Invalid Input, Try Again!')
