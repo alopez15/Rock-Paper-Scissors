@@ -1,0 +1,71 @@
+h1{
+    font-size: 4em;
+}
+
+button img{
+    max-width: 30%;
+}
+
+#rock-btn, #paper-btn, #scissors-btn{
+    border: solid;
+    padding: 0%;
+    margin: 0%;
+    background: none;
+    border-radius: 10px;
+}
+
+body{
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#game-content{
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+}
+
+#game-result{
+    display: block;
+    padding-top: 2%;
+    font-size: 50px;
+}
+
+#score{
+    font-size: 100px;
+}
+
+button {
+    cursor: pointer;  
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+#rock-btn, #paper-btn, #scissors-btn{
+    margin: 1%;
+}
+
+
+
+/* 
+
+.animation{
+    animation: shake .5s;
+}
+
+@keyframes shake{
+    0%{
+        transform:  translateY(20px);
+    }
+
+    40%{
+        transform: translateY(-20px);
+    }
+
+    80%{
+        transform: translateY(20px);
+    }
+} */

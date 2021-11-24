@@ -4,9 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
     <title>Rock-Paper-Scissors</title>
   </head>
   <body>
-    <script src="./app.js"></script>
+
+    <h1>Rock, Paper, Scissors?</h1>
+    <div id="score"><span id="player-score">0</span> - <span id="computer-score">0</span></div>
+    <div id="game-content">
+      <div>
+      <p>Player</p>
+      <img id="player-img" src="./img/rock.jpg" alt="rock">
+    </div>
+    <div>
+      <p>Computer</p>
+      <img id="computer-img" src="./img/rock2.jpg" alt="rock">
+    </div>
+  </div>
+
+  <div id="btns">
+    <button id="rock-btn"><img src="./img/rock.jpg" alt="rock icon"></button>
+    <button id="paper-btn"><img src="./img/paper(1).png" alt="paper icon"></button>
+    <button id="scissors-btn"><img src="./img/scissors(1).png" alt="scissors icon"></button>
+  </div>
+
+  <div>
+    <span id="game-result"></span>
+  </div>
+
+  <script src="./app.js"></script>
+
   </body>
 </html>
