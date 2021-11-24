@@ -1,3 +1,7 @@
-# Rock-Paper-Scissors
+# The Odin Project for Web fundamentals
 
-1. Open console before starting to see results
+Created a Rock and Paper Scissors with a simple UI. 
+
+Gained better understanding on how to manipulate DOM.
+
+
