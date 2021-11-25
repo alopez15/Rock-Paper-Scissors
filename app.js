@@ -90,6 +90,7 @@ const playerScoreID = document.querySelector('#player-score')
 const computerScoreID = document.querySelector('#computer-score')
 const buttons = document.querySelector('#btns')
 const animation = document.querySelector('.animation')
+const playAgainbtn = document.querySelector('.btn')
 
 let playerScore = 0, computerScore = 0;
 
@@ -98,10 +99,10 @@ scissors.addEventListener('click', (e) => {
     let compPlay = computerPlay()
     let result = playRound(compPlay, 'Scissors')
 
-    // computerChoice.className += animation' 
-    // figure out how to add animation on click
-
-    playerChoice.src = './img/scissors(1).png'
+    //computerChoice.classList.add ('animation') 
+    
+    playerChoice.src = './img/scissors(1).png'; 
+    gameResult.style.display = 'block';
 
     displayImg(compPlay);
     printResult(result);
@@ -129,6 +130,7 @@ rock.addEventListener('click', (e) => {
     printResult(result);
 
     playerChoice.src = './img/rock.jpg';
+    gameResult.style.display = 'block';
 
     if (result === true){
         playerScore++;
@@ -153,6 +155,7 @@ paper.addEventListener('click', (e) => {
     printResult(result);
 
     playerChoice.src = './img/paper(1).png';
+    gameResult.style.display = 'block';
 
     if (result === true){
         playerScore++;
@@ -168,22 +171,37 @@ paper.addEventListener('click', (e) => {
 
 });
 
+playAgainbtn.addEventListener('click',(event) => {
+
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreID.textContent = 0
+    computerScoreID.textContent = 0
+    buttons.style.display = 'inline';
+    gameResult.style.display = 'none'
+    playAgainbtn.style.display = 'none'
+
+})
+
 const endGame = (playerScore, computerScore) => {
     
     if( playerScore === 5 && computerScore < 5){
         gameResult.textContent = 'Game Over, Player Wins!';
         buttons.style.display = 'none';
-        gameFlag = 1;
+        playAgainbtn.style.display = 'inline'
+        
 
     } else if ( playerScore === 5 && computerScore === 5 ){
         gameResult.textContent = 'Game Over, It\'s a Draw!';
         buttons.style.display = 'none';
-        gameFlag = 1;
+        playAgainbtn.style.display = 'inline'
+        
 
     } else if (playerScore < 5 && computerScore === 5){
         gameResult.textContent = 'Game Over, Computer Wins!';
         buttons.style.display = 'none';
-        gameFlag = 1;
+        playAgainbtn.style.display = 'inline'
+        
     }
        
 }

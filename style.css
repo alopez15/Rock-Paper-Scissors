@@ -12,6 +12,7 @@ button img{
     margin: 0%;
     background: none;
     border-radius: 10px;
+    margin: 1%;
 }
 
 body{
@@ -44,16 +45,24 @@ button:hover{
     transition: .2s;
 }
 
-#rock-btn, #paper-btn, #scissors-btn{
-    margin: 1%;
+button:active{
+    transform: scale(1);
+}
+
+.btn{
+    border: solid;
+    padding: .5%;
+    margin-top: 1.5%;
+    background: none;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    display: none;
 }
 
 
-
-/* 
-
 .animation{
-    animation: shake .5s;
+    animation: shake 1s;
 }
 
 @keyframes shake{
@@ -61,11 +70,16 @@ button:hover{
         transform:  translateY(20px);
     }
 
-    40%{
+    20%{
         transform: translateY(-20px);
     }
 
-    80%{
+    40%{
         transform: translateY(20px);
     }
-} */
+
+    80%{
+        transform: translateY(-20px);
+    }
+    
+} 
